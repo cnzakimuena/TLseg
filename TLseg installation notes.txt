@@ -1,0 +1,17 @@
+conda create -p C:\[path]\TLseg\tlseg_env
+conda activate C:\[path]\TLseg\tlseg_env
+
+conda install python=3.8
+pip install torch==1.6 -f https://download.pytorch.org/whl/torch_stable.html
+pip install torchvision==0.7 -f https://download.pytorch.org/whl/torch_stable.html
+pip install numpy==1.19
+pip install scikit-learn==0.23
+pip install scipy==1.5
+pip install tqdm==4.50
+pip install click
+
+---------------------------------------------------------
+
+*if any issues with installation*
+conda deactivate
+conda remove -p C:\[path]\TLseg\tlseg_env --all
