@@ -1,6 +1,8 @@
+
 conda create -p C:\[path]\TLseg\tlseg_env
 conda activate C:\[path]\TLseg\tlseg_env
 
+*to enable training*
 conda install python=3.8
 pip install torch==1.6 -f https://download.pytorch.org/whl/torch_stable.html
 pip install torchvision==0.7 -f https://download.pytorch.org/whl/torch_stable.html
@@ -10,8 +12,20 @@ pip install scipy==1.5
 pip install tqdm==4.50
 pip install click
 
+*to enable inference*
+pip install opencv-python==4.7.0.72
+pip install matplotlib==3.6
+
 ---------------------------------------------------------
 
 *if any issues with installation*
 conda deactivate
 conda remove -p C:\[path]\TLseg\tlseg_env --all
+
+---------------------------------------------------------
+
+*to train*
+run 'main.py'
+
+*to test re-trained model inference on one image*
+run 'TEST.py'

@@ -10,22 +10,22 @@ from model import createDeepLabv3
 from trainer import train_model
 
 
-@click.command()
-@click.option("--data-directory",
-              required=True,
-              help="Specify the data directory.")
-@click.option("--exp_directory",
-              required=True,
-              help="Specify the experiment directory.")
-@click.option(
-    "--epochs",
-    default=25,
-    type=int,
-    help="Specify the number of epochs you want to run the experiment for.")
-@click.option("--batch-size",
-              default=4,
-              type=int,
-              help="Specify the batch size for the dataloader.")
+# @click.command()
+# @click.option("--data-directory",
+#               required=True,
+#               help="Specify the data directory.")
+# @click.option("--exp_directory",
+#               required=True,
+#               help="Specify the experiment directory.")
+# @click.option(
+#     "--epochs",
+#     default=25,
+#     type=int,
+#     help="Specify the number of epochs you want to run the experiment for.")
+# @click.option("--batch-size",
+#               default=4,
+#               type=int,
+#               help="Specify the batch size for the dataloader.")
 def main(data_directory, exp_directory, epochs, batch_size):
     # Create the deeplabv3 resnet101 model which is pretrained on a subset
     # of COCO train2017, on the 20 categories that are present in the Pascal VOC dataset.
@@ -61,4 +61,8 @@ def main(data_directory, exp_directory, epochs, batch_size):
 
 
 if __name__ == "__main__":
-    main()
+    exp_directory = r'.\CFExp'
+    data_directory = r'.\CrackForest'
+    main(data_directory, exp_directory, 25, 3)
+    # main()
+
