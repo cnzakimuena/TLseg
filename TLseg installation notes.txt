@@ -1,20 +1,19 @@
 
-conda create -p C:\[path]\TLseg\tlseg_env
-conda activate C:\[path]\TLseg\tlseg_env
+conda create -p C:\[path]\tlseg_env
+conda activate C:\[path]\tlseg_env
 
-*to enable training*
+*to enable training and inference*
+# torch and torchvision installations below features cuda 10.1 (compatible with cuda 11.7)
 conda install python=3.8
 pip install torch==1.6 -f https://download.pytorch.org/whl/torch_stable.html
 pip install torchvision==0.7 -f https://download.pytorch.org/whl/torch_stable.html
-pip install numpy==1.19
 pip install scikit-learn==0.23
 pip install scipy==1.5
 pip install tqdm==4.50
-pip install click
-
-*to enable inference*
+pip install click==8.1.7
 pip install opencv-python==4.7.0.72
 pip install matplotlib==3.6
+pip install numpy==1.19
 
 ---------------------------------------------------------
 
@@ -29,3 +28,5 @@ run 'main.py'
 
 *to test re-trained model inference on one image*
 run 'TEST.py'
+
+

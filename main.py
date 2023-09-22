@@ -1,10 +1,9 @@
-from pathlib import Path
 
+from pathlib import Path
 import click
 import torch
 from sklearn.metrics import f1_score, roc_auc_score
 from torch.utils import data
-
 import datahandler
 from model import createDeepLabv3
 from trainer import train_model
